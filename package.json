@@ -1,7 +1,6 @@
 {
-  "name": "blog",
-  "version": "0.1.0",
-  "private": true,
+  "name": "amol-blog",
+  "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
