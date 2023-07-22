@@ -4,7 +4,7 @@ import path from 'node:path';
 
 function getBlog() {
   const files = fs.readdirSync(path.join(process.cwd(), 'blog'));
-  return files.filter(file => file.endsWith('.mdx'));
+  return files.filter(file => file.endsWith('.md'));
 }
 
 export default function Home() {
