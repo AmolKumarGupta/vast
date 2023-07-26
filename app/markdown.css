@@ -55,13 +55,6 @@
 	max-width: 100%;
 }
 
-.block-md img {
-	border-radius: 50%;
-	height: 200px;
-	margin: 0 auto;
-	width: 200px;
-}
-
 .block-md a,
 .block-md a:visited {
 	color: #3498db;

@@ -41,8 +41,9 @@ export default async function Demo({ params }) {
     const {meta, content} = await getPage(params.slug)
 
     return <>
-        <div className='block-md container mx-auto max-w-4xl'>
-            <div className='text-center text-3xl font-bold'>{ meta.title }</div>
+        <div className='block-md container mx-auto px-3 max-w-4xl'>
+            <h2 className='font-bold'>{ meta.title }</h2>
+            <i><small>Created at {meta.creation_date}</small></i>
             <div dangerouslySetInnerHTML={{__html: content}}></div>
         </div>
     </>
