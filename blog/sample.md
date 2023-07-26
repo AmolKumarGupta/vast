@@ -1,3 +1,7 @@
+---
+title: How i start my blog
+---
+
 ## hello world
 
 this is a *test*

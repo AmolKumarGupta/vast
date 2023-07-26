@@ -1,3 +1,4 @@
+import matter from 'gray-matter';
 import fs from 'node:fs'
 import path from 'node:path'
 import rehypeHighlight from 'rehype-highlight/lib';
@@ -17,21 +18,26 @@ async function getPage(fileName) {
         encoding: 'utf8'
     });
 
-    const content = await unified()
+    const {data, content} = matter(raw);
+
+    const html = await unified()
         .use(remarkParse)
         .use(remarkRehype)
         .use(rehypeStringify)
         .use(rehypeHighlight)
-        .process(raw);
+        .process(content);
 
-    return String(content);
+    return {
+        data,
+        content: String(html)
+    };
 }
 
 export default async function Demo({ params }) {
-    const content = await getPage(params.slug)
+    const {data, content} = await getPage(params.slug)
 
     return <>
-        <div>Demo</div>
+        <div>{ data.title }</div>
         <div dangerouslySetInnerHTML={{__html: content}}></div>
     </>
 }
