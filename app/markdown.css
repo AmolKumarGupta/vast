@@ -1,0 +1,92 @@
+.block-md body {
+	line-height: 1.85;
+}
+
+.block-md p {
+	font-size: 1rem;
+	margin-bottom: 1.3rem;
+}
+
+.block-md h1,
+.block-md h2,
+.block-md h3,
+.block-md h4 {
+	margin: 1.414rem 0 .5rem;
+	font-weight: inherit;
+	line-height: 1.42;
+}
+
+.block-md h1 {
+	margin-top: 0;
+	font-size: 3.998rem;
+}
+
+.block-md h2 {
+	font-size: 2.827rem;
+}
+
+.block-md h3 {
+	font-size: 1.999rem;
+}
+
+.block-md h4 {
+	font-size: 1.414rem;
+}
+
+.block-md h5 {
+	font-size: 1.121rem;
+}
+
+.block-md h6 {
+	font-size: .88rem;
+}
+
+.block-md small {
+	font-size: .707em;
+}
+
+.block-md img,
+.block-md canvas,
+.block-md iframe,
+.block-md video,
+.block-md svg,
+.block-md select,
+.block-md textarea {
+	max-width: 100%;
+}
+
+.block-md img {
+	border-radius: 50%;
+	height: 200px;
+	margin: 0 auto;
+	width: 200px;
+}
+
+.block-md a,
+.block-md a:visited {
+	color: #3498db;
+}
+
+.block-md a:hover,
+.block-md a:focus,
+.block-md a:active {
+	color: #2980b9;
+}
+
+.block-md blockquote {
+	margin: 0;
+	border-left: 5px solid #7a7a7a;
+	font-style: italic;
+	padding: 1.33em;
+	text-align: left;
+}
+
+.block-md ul,
+.block-md ol,
+.block-md li {
+	text-align: left;
+}
+
+.block-md p {
+	color: #777;
+}

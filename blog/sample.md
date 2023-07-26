@@ -1,10 +1,19 @@
 ---
-title: How i start my blog
+title: Sample Title
+excerpt: just an example of how to make post
+creation_date: 2023-07-26
+tags: 
+    - php
+    - sample
+    - happy
 ---
 
 ## hello world
 
+
 this is a *test*
+
+
 
 ```php
 

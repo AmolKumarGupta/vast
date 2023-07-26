@@ -8,17 +8,21 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 
 export async function generateStaticParams() {
-    return [
-        {slug: 'sample'}
-    ]
-}
-
-async function getPage(fileName) {
-    let raw = fs.readFileSync(path.join(process.cwd(), 'blog', `${fileName}.md`), {
+    let files = fs.readdirSync(path.join(process.cwd(), 'blog'), {
         encoding: 'utf8'
     });
 
-    const {data, content} = matter(raw);
+    return files
+        .filter((file) => file.endsWith('.md'))
+        .map((file) => { slug: file.replace(".md", "") });
+}
+
+async function getPage(fileName) {
+    let rawFile = fs.readFileSync(path.join(process.cwd(), 'blog', `${fileName}.md`), {
+        encoding: 'utf8'
+    });
+
+    const {data, content} = matter(rawFile);
 
     const html = await unified()
         .use(remarkParse)
@@ -28,16 +32,18 @@ async function getPage(fileName) {
         .process(content);
 
     return {
-        data,
+        meta: data,
         content: String(html)
     };
 }
 
 export default async function Demo({ params }) {
-    const {data, content} = await getPage(params.slug)
+    const {meta, content} = await getPage(params.slug)
 
     return <>
-        <div>{ data.title }</div>
-        <div dangerouslySetInnerHTML={{__html: content}}></div>
+        <div className='block-md container mx-auto max-w-4xl'>
+            <div className='text-center text-3xl font-bold'>{ meta.title }</div>
+            <div dangerouslySetInnerHTML={{__html: content}}></div>
+        </div>
     </>
 }
