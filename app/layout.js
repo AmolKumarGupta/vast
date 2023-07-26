@@ -1,5 +1,6 @@
 import NavBar from './_components/Navbar'
 import './globals.css'
+import './markdown.css'
 
 export const metadata = {
   title: 'A Personal Blog written by amol',

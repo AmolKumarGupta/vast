@@ -1,6 +1,6 @@
 {
   "name": "amol-blog",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,6 +22,7 @@
     "rehype-stringify": "^9.0.3",
     "remark-parse": "^10.0.2",
     "remark-rehype": "^10.1.0",
+    "gray-matter": "^4.0.3",
     "unified": "^10.1.2"
   }
 }
