@@ -45,8 +45,9 @@ export default async function Demo({ params }) {
     return <>
         <div className='block-md container mx-auto px-3 max-w-4xl'>
             <h2 className='font-bold'>{ meta.title }</h2>
-            <i><small>Created at {meta.creation_date}</small></i>
+            <h6>Created at {meta.creation_date}</h6><br/>
             <div dangerouslySetInnerHTML={{__html: content}}></div>
+            <div className='my-8' ></div>
         </div>
     </>
 }
