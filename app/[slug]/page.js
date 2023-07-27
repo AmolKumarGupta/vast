@@ -14,7 +14,9 @@ export async function generateStaticParams() {
 
     return files
         .filter((file) => file.endsWith('.md'))
-        .map((file) => { slug: file.replace(".md", "") });
+        .map((file) => {
+            return { slug: file.replace(".md", "") }
+        });
 }
 
 async function getPage(fileName) {
