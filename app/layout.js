@@ -3,7 +3,7 @@ import './globals.css'
 import './markdown.css'
 
 export const metadata = {
-  title: 'A Personal Blog written by amol',
+  title: 'Vast',
   description: 'A personal blog written by amol',
 }
 
