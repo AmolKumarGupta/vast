@@ -21,7 +21,7 @@ export default function BlogPost({
 				<p className="leading-relaxed">{excerpt}</p>
 
 				<div className="flex gap-2 text-sm text-blue-500">
-					{tags ? tags.map(tag => <span>#{tag}</span>) : ''}
+					{tags ? tags.map(tag => <span key={tag}>#{tag}</span>) : ''}
 				</div>
 
 				<a href={`/${slug}`} className="text-blue-700 inline-flex items-center mt-4">Read

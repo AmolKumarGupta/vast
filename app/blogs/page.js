@@ -6,7 +6,7 @@ import { getMetaRecursively } from "../_utils/blog";
 
 export default function Blogs() {
 	
-	const blogList = getMetaRecursively().map((blog) => <BlogPost {...blog}/>)
+	const blogList = getMetaRecursively().map((blog) => <BlogPost key={blog.slug} {...blog}/>)
 
 	return (
 		<main className='container mx-auto mt-6 px-3 max-w-4xl'>
