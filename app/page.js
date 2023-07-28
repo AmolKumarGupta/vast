@@ -5,7 +5,7 @@ export default function Home() {
 		<section className="text-gray-600 body-font dark:bg-gray-900">
 			<div className="container mx-auto flex px-5 pb-24 pt-20 items-center justify-center flex-col">
 				<Image
-					src="/favicon.ico"
+					src="/vast.png"
 					width={50}
 					height={50}
 					alt="hero"
