@@ -10,6 +10,7 @@ export default function Home() {
 					height={50}
 					alt="hero"
 					unoptimized={true}
+					priority={false}
 					className="lg:w-1/6 md:w-2/6 sm:w-2/6 w-3/6 mb-10 object-cover object-center rounded"
 				/>
 				<div className="text-center lg:w-2/3 w-full">
