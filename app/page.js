@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { portfolio } from './config/profile'
 import Footer from './_components/Footer'
+import { portfolio } from '@config/profile'
+import { blogUrl } from '@config/blog'
 
 export default function Home() {
 	return (
@@ -22,7 +23,7 @@ export default function Home() {
 							A way to learn and keep things in one place in this vast world of code
 						</p>
 						<div className="flex justify-center">
-							<a href="/blogs" className="cursor-pointer inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded sm:text-lg text-base">Lets Started</a>
+							<a href={blogUrl} className="cursor-pointer inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded sm:text-lg text-base">Lets Started</a>
 							<a href={portfolio} className="cursor-pointer ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded sm:text-lg text-base">Portfolio</a>
 						</div>
 					</div>

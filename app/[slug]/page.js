@@ -6,9 +6,10 @@ import rehypeStringify from 'rehype-stringify/lib';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import { blogDir } from '@config/blog';
 
 export async function generateStaticParams() {
-    let files = fs.readdirSync(path.join(process.cwd(), 'blog'), {
+    let files = fs.readdirSync(path.join(process.cwd(), blogDir), {
         encoding: 'utf8'
     });
 
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
 }
 
 async function getPage(fileName) {
-    let rawFile = fs.readFileSync(path.join(process.cwd(), 'blog', `${fileName}.md`), {
+    let rawFile = fs.readFileSync(path.join(process.cwd(), blogDir, `${fileName}.md`), {
         encoding: 'utf8'
     });
 
