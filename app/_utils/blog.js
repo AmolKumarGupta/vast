@@ -3,6 +3,8 @@ import path from 'node:path';
 import matter from "gray-matter";
 
 export function getMetaRecursively() {
+    const countPage = 10;
+    
     let dir = fs.readdirSync(path.join(process.cwd(), 'blog'), {
         encoding: 'utf8'
     });
@@ -11,7 +13,7 @@ export function getMetaRecursively() {
     
     dir.filter((file) => file.endsWith('.md'))
         .forEach((file, index) => {
-            if (index >= 9) {
+            if (index > countPage) {
                 return;
             }
 
