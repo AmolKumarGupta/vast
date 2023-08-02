@@ -9,7 +9,7 @@ export default function Home() {
 			<section className="text-gray-600 body-font dark:bg-gray-900">
 				<div className="container mx-auto flex px-5 pb-24 pt-20 items-center justify-center flex-col">
 					<Image
-						src="/vast.png"
+						src={`${process.env.ASSET_PREFIX}/vast.png`}
 						width={50}
 						height={50}
 						alt="hero"
@@ -23,7 +23,7 @@ export default function Home() {
 							A way to learn and keep things in one place in this vast world of code
 						</p>
 						<div className="flex justify-center">
-							<a href={blogUrl} className="cursor-pointer inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded sm:text-lg text-base">Lets Started</a>
+							<a href={`${process.env.ASSET_PREFIX}${blogUrl}`} className="cursor-pointer inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded sm:text-lg text-base">Lets Started</a>
 							<a href={portfolio} className="cursor-pointer ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded sm:text-lg text-base">Portfolio</a>
 						</div>
 					</div>

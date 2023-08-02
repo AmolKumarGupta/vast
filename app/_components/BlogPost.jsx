@@ -15,7 +15,7 @@ export default function BlogPost({
 				<span className="mt-1 text-gray-500 text-sm">{creation_date}</span>
 			</div>
 			<div className="flex-grow w-full">
-				<a href={`/${slug}`}>
+				<a href={`${process.env.ASSET_PREFIX}/${slug}`}>
 					<h2 className="text-2xl font-medium text-gray-900 title-font mb-2">{title}</h2>
 				</a>
 				<p className="leading-relaxed">{excerpt}</p>
@@ -24,7 +24,7 @@ export default function BlogPost({
 					{tags ? tags.map(tag => <span key={tag}>#{tag}</span>) : ''}
 				</div>
 
-				<a href={`/${slug}`} className="text-blue-700 inline-flex items-center mt-4">Read
+				<a href={`${process.env.ASSET_PREFIX}/${slug}`} className="text-blue-700 inline-flex items-center mt-4">Read
 					<svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
 						<path d="M5 12h14"></path>
 						<path d="M12 5l7 7-7 7"></path>
